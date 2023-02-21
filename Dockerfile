@@ -6,7 +6,8 @@ WORKDIR /cs-install
 RUN apt-get update && \
     apt-get install -y \
         wget \
-        gnupg2
+        gnupg2 \
+        openssh-client
 
 # Add Microsoft keys
 RUN wget -qO - https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
